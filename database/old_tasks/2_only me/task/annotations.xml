@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <task>
+      <id>5</id>
+      <name>Describe the person you see.</name>
+      <size>6</size>
+      <mode>annotation</mode>
+      <overlap>0</overlap>
+      <bugtracker></bugtracker>
+      <created>2020-06-15 08:59:10.758721+00:00</created>
+      <updated>2020-06-15 09:10:43.353332+00:00</updated>
+      <start_frame>0</start_frame>
+      <stop_frame>5</stop_frame>
+      <frame_filter></frame_filter>
+      <z_order>False</z_order>
+      <labels>
+        <label>
+          <name>Describtion</name>
+          <attributes>
+            <attribute>
+              <name>1</name>
+              <mutable>False</mutable>
+              <input_type>text</input_type>
+              <default_value></default_value>
+              <values></values>
+            </attribute>
+            <attribute>
+              <name>2</name>
+              <mutable>False</mutable>
+              <input_type>text</input_type>
+              <default_value></default_value>
+              <values></values>
+            </attribute>
+            <attribute>
+              <name>3</name>
+              <mutable>False</mutable>
+              <input_type>text</input_type>
+              <default_value></default_value>
+              <values></values>
+            </attribute>
+            <attribute>
+              <name>4</name>
+              <mutable>False</mutable>
+              <input_type>text</input_type>
+              <default_value></default_value>
+              <values></values>
+            </attribute>
+            <attribute>
+              <name>5</name>
+              <mutable>False</mutable>
+              <input_type>text</input_type>
+              <default_value></default_value>
+              <values></values>
+            </attribute>
+          </attributes>
+        </label>
+      </labels>
+      <segments>
+        <segment>
+          <id>5</id>
+          <start>0</start>
+          <stop>5</stop>
+          <url>http://localhost:8080/?id=5</url>
+        </segment>
+      </segments>
+      <owner>
+        <username>julia-alfeo</username>
+        <email>jalfeo94@live.de</email>
+      </owner>
+      <assignee></assignee>
+    </task>
+    <dumped>2020-06-15 09:10:54.893586+00:00</dumped>
+  </meta>
+  <image id="0" name="79A94B7A-2DD4-4191-84AA-B19AD27A01EB.JPG" width="3840" height="5760">
+    <box label="Describtion" occluded="0" xtl="1507.54" ytl="1412.22" xbr="2175.96" ybr="2069.01">
+      <attribute name="1">This is me being happy being on this trip</attribute>
+      <attribute name="2"></attribute>
+      <attribute name="3"></attribute>
+      <attribute name="4"></attribute>
+      <attribute name="5"></attribute>
+    </box>
+    <box label="Describtion" occluded="0" xtl="1554.04" ytl="3754.58" xbr="2588.63" ybr="4835.67">
+      <attribute name="1">This was my favorite board that I ever had.</attribute>
+      <attribute name="2">btw my board is like an extension of my body</attribute>
+      <attribute name="3"></attribute>
+      <attribute name="4"></attribute>
+      <attribute name="5"></attribute>
+    </box>
+    <box label="Describtion" occluded="0" xtl="1100.68" ytl="2231.76" xbr="1536.61" ybr="2650.24">
+      <attribute name="1">I think I was holding some delicions nuts and chocolate</attribute>
+      <attribute name="2"></attribute>
+      <attribute name="3"></attribute>
+      <attribute name="4"></attribute>
+      <attribute name="5"></attribute>
+    </box>
+    <box label="Describtion" occluded="0" xtl="1849.89" ytl="2865.30" xbr="2367.77" ybr="3481.40">
+      <attribute name="1">...and a Banana</attribute>
+      <attribute name="2"></attribute>
+      <attribute name="3"></attribute>
+      <attribute name="4"></attribute>
+      <attribute name="5"></attribute>
+    </box>
+  </image>
+  <image id="1" name="DSC02242_Original.jpg" width="2268" height="3237">
+    <box label="Describtion" occluded="0" xtl="693.10" ytl="953.76" xbr="1196.12" ybr="2074.13">
+      <attribute name="1">All I see on this picture is my messy hair.</attribute>
+      <attribute name="2"></attribute>
+      <attribute name="3"></attribute>
+      <attribute name="4"></attribute>
+      <attribute name="5"></attribute>
+    </box>
+  </image>
+  <image id="2" name="IMG_2728.JPG" width="1983" height="2644">
+    <box label="Describtion" occluded="0" xtl="601.88" ytl="402.85" xbr="1252.88" ybr="853.74">
+      <attribute name="1">This is me trying hard growing out my fringe.</attribute>
+      <attribute name="2"></attribute>
+      <attribute name="3"></attribute>
+      <attribute name="4"></attribute>
+      <attribute name="5"></attribute>
+    </box>
+  </image>
+  <image id="3" name="IMG_5774.JPG" width="993" height="1334">
+    <box label="Describtion" occluded="0" xtl="429.16" ytl="940.95" xbr="608.19" ybr="1024.41">
+      <attribute name="1">I rolled my pants unevenly...</attribute>
+      <attribute name="2"></attribute>
+      <attribute name="3"></attribute>
+      <attribute name="4"></attribute>
+      <attribute name="5"></attribute>
+    </box>
+    <box label="Describtion" occluded="0" xtl="357.81" ytl="271.93" xbr="628.38" ybr="1128.06">
+      <attribute name="1">I felt super comfortable being photographed...</attribute>
+      <attribute name="2"></attribute>
+      <attribute name="3"></attribute>
+      <attribute name="4"></attribute>
+      <attribute name="5"></attribute>
+    </box>
+  </image>
+  <image id="4" name="IMG_6421.JPG" width="3088" height="2316">
+    <box label="Describtion" occluded="0" xtl="1090.47" ytl="332.03" xbr="1439.47" ybr="1045.91">
+      <attribute name="1">super messy fringe...</attribute>
+      <attribute name="2"></attribute>
+      <attribute name="3"></attribute>
+      <attribute name="4"></attribute>
+      <attribute name="5"></attribute>
+    </box>
+    <box label="Describtion" occluded="0" xtl="1617.08" ytl="269.70" xbr="2904.01" ybr="1986.96">
+      <attribute name="1">I love this shirt which was a gift by a friend</attribute>
+      <attribute name="2"></attribute>
+      <attribute name="3"></attribute>
+      <attribute name="4"></attribute>
+      <attribute name="5"></attribute>
+    </box>
+  </image>
+  <image id="5" name="IMG_7746.PNG" width="813" height="1091">
+    <box label="Describtion" occluded="0" xtl="487.93" ytl="257.62" xbr="609.03" ybr="357.00">
+      <attribute name="1">One of my most favorite hairstyles</attribute>
+      <attribute name="2"></attribute>
+      <attribute name="3"></attribute>
+      <attribute name="4"></attribute>
+      <attribute name="5"></attribute>
+    </box>
+    <box label="Describtion" occluded="0" xtl="441.69" ytl="869.73" xbr="550.68" ybr="940.18">
+      <attribute name="1">this is how my skater knees always look like.</attribute>
+      <attribute name="2"></attribute>
+      <attribute name="3"></attribute>
+      <attribute name="4"></attribute>
+      <attribute name="5"></attribute>
+    </box>
+    <box label="Describtion" occluded="0" xtl="433.99" ytl="412.85" xbr="559.49" ybr="529.54">
+      <attribute name="1">I was killing this presentation, screensharing from my phone</attribute>
+      <attribute name="2"></attribute>
+      <attribute name="3"></attribute>
+      <attribute name="4"></attribute>
+      <attribute name="5"></attribute>
+    </box>
+  </image>
+</annotations>

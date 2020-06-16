@@ -1,0 +1,53 @@
+.AnnotationImages {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+    /*width: 300px;*/
+    /*border: 1px solid #ccc;*/
+ 
+}
+
+.AnnotationHeadline {
+    display: inline-block;
+    padding: 10px;
+    vertical-align: top;
+    margin: 0;
+
+}
+
+.AnnotationSubeHeadline {
+    display: inline-block;
+    padding: 10px;
+    vertical-align: top;
+    margin: 0;
+}
+
+
+.AnnotationText {
+    display: inline-block;
+    padding: 10px;
+    vertical-align: top;
+    margin: 0;
+}
+
+.AnnotationTextContainer {
+    display: inline-block;
+    vertical-align: top;
+    padding: 10px;
+}
+
+.imageContainer {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0px;
+}
+
+.myCanvas {
+    padding: 10px;
+
+}
+
+.imageContainer {
+    padding: 10px;
+
+}

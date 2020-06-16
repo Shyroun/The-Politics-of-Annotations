@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<annotations>
+  <version>1.1</version>
+  <meta>
+    <task>
+      <id>2</id>
+      <name>Describe the identity of the people you can see on the photo.</name>
+      <size>5</size>
+      <mode>annotation</mode>
+      <overlap>0</overlap>
+      <bugtracker></bugtracker>
+      <created>2020-06-03 11:09:29.452579+00:00</created>
+      <updated>2020-06-05 13:47:53.705080+00:00</updated>
+      <start_frame>0</start_frame>
+      <stop_frame>4</stop_frame>
+      <frame_filter></frame_filter>
+      <z_order>False</z_order>
+      <labels>
+        <label>
+          <name>person</name>
+          <attributes>
+            <attribute>
+              <name>identity</name>
+              <mutable>False</mutable>
+              <input_type>text</input_type>
+              <default_value></default_value>
+              <values></values>
+            </attribute>
+            <attribute>
+              <name>identity2</name>
+              <mutable>True</mutable>
+              <input_type>text</input_type>
+              <default_value></default_value>
+              <values></values>
+            </attribute>
+          </attributes>
+        </label>
+      </labels>
+      <segments>
+        <segment>
+          <id>2</id>
+          <start>0</start>
+          <stop>4</stop>
+          <url>http://localhost:8080/?id=2</url>
+        </segment>
+      </segments>
+      <owner>
+        <username>julia-alfeo</username>
+        <email>jalfeo94@live.de</email>
+      </owner>
+      <assignee>
+        <username>julia-alfeo</username>
+        <email>jalfeo94@live.de</email>
+      </assignee>
+    </task>
+    <dumped>2020-06-05 13:48:01.953776+00:00</dumped>
+  </meta>
+  <image id="0" name="0ab11714-7283-46b6-9c36-9387a7c9f978.JPG" width="1024" height="768">
+    <box label="person" occluded="0" xtl="246.50" ytl="289.11" xbr="315.70" ybr="366.08">
+      <attribute name="identity">my first annotation</attribute>
+      <attribute name="identity2"></attribute>
+    </box>
+    <box label="person" occluded="0" xtl="533.41" ytl="424.40" xbr="593.28" ybr="506.04">
+      <attribute name="identity">my ssecond annotation</attribute>
+      <attribute name="identity2"></attribute>
+    </box>
+  </image>
+  <image id="1" name="4a9465f3-d030-4442-91bf-c6284fb6e408.JPG" width="768" height="1024">
+    <box label="person" occluded="0" xtl="247.84" ytl="340.11" xbr="329.61" ybr="444.18">
+      <attribute name="identity">this is me</attribute>
+      <attribute name="identity2"></attribute>
+    </box>
+    <box label="person" occluded="0" xtl="2.52" ytl="353.03" xbr="205.09" ybr="685.78">
+      <attribute name="identity">achel</attribute>
+      <attribute name="identity2"></attribute>
+    </box>
+  </image>
+  <image id="2" name="_111434817_photo25-03-2020125737.jpg" width="1024" height="576">
+    <box label="person" occluded="0" xtl="282.27" ytl="101.41" xbr="439.33" ybr="307.46">
+      <attribute name="identity">a woman</attribute>
+      <attribute name="identity2"></attribute>
+    </box>
+  </image>
+  <image id="3" name="friends_on-city-street-having-fun-732x549-thumbnail.jpg" width="732" height="549">
+    <box label="person" occluded="0" xtl="311.25" ytl="38.29" xbr="454.09" ybr="220.04">
+      <attribute name="identity">guy with glasses</attribute>
+      <attribute name="identity2"></attribute>
+    </box>
+  </image>
+  <image id="4" name="image.jpeg" width="1500" height="1127">
+    <box label="person" occluded="0" xtl="667.47" ytl="438.20" xbr="1083.19" ybr="843.67">
+      <attribute name="identity">a kid with a pink bow</attribute>
+      <attribute name="identity2"></attribute>
+    </box>
+  </image>
+</annotations>
