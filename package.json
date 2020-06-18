@@ -1,0 +1,29 @@
+{
+  "name": "politics_of_annotations",
+  "version": "1.0.0",
+  "description": "This is a project about the politics of annotations",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shyroun/The-Politics-of-Annotations.git"
+  },
+  "keywords": [
+    "ai",
+    "politics",
+    "annotations"
+  ],
+  "author": "Julia Alfeo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shyroun/The-Politics-of-Annotations/issues"
+  },
+  "homepage": "https://github.com/Shyroun/The-Politics-of-Annotations#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-fetch": "^2.6.0",
+    "nodemon": "^2.0.4"
+  }
+}
