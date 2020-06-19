@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <h1>Annotation Tool: CVAT</h1>
     <p><a href="../index.html">go back</a></p>
     <iframe src="http://localhost:8080/tasks?page=1" title="CVAT" width="100%" height="800"></iframe>
+    <script>
+        const data = {
+            "username": "julia-alfeo",
+            "email": "jalfeo94@live.de",
+            "password": "Q5zgxpGq"
+        };
+        const options = {
+            method: "POST",
+            headers: {
+                //'Authorization': 'Token 97ea4b91c5c93d6e7ba72857ef5b70ff30831a30',
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(data)
+        };
+        fetch("/myAPI", options)
+
+    </script>
 </body>
+
 </html>
