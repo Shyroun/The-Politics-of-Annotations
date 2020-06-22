@@ -48,7 +48,29 @@ async function loginToAPI() {
     dataReceived = false;
     keyToken = json;
     console.log("key received")
-    console.log(keyToken);
+    console.log(keyToken.key);
+    createNewUser();
+}
+
+
+//4. GET JOB INFORMATION (TEST)
+async function createNewUser() {
+    const options = {
+        method: "GET",
+        headers: {
+            'Authorization': "token " + keyToken.key,
+            "Content-Type": "application/json"
+        },
+        //body: JSON.stringify(data)
+    };
+    //fUWjX4blhjhsA2G72A9RVyu6e1sbPxxOjhJQVvXOt1VdkyprydzyF2wwkwx1QW1e
+    //bygoXYGi2BlXe0oHsjqJKwy9ztB6i2oPfV3VVpsLejZIYw71YWQqu0AzFYGWjrSf
+
+    const api_url = "http://localhost:8080/api/v1/jobs/5";
+    const response = await fetch(api_url, options);
+    const json = await response.json();
+    console.log("received job information");
+    console.log(json);
 }
 
 
