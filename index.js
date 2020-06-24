@@ -1,10 +1,15 @@
 const express = require("express");
 const app = express();
 const fetch = require("node-fetch");
+const annotation_url = "http://localhost:8080"
 
 var loginData;
 var dataReceived = false;
 var keyToken;
+var lastUserID
+
+var autoUsername;
+var pw;
 
 //1. START MY APP
 app.listen(3000, () => console.log("listening at 3000"));
@@ -13,25 +18,38 @@ app.use(express.json({ limit: "1mb" }));
 
 
 //2. LISTEN TO CLIENT TO GET LOGIN DATA
-app.post("/myAPI", (request, response) => {
+app.get("/myAPI", (request, response) => {
+    loginToAPI();
+    const data = {
+        username: autoUsername,
+        password: pw
+    }
+
+    response.json({
+        body: JSON.stringify(data)
+    })
+    //response.send("myAPI");
+    
+});
+
+/* app.post("/userLogin", (request, response) => {
     console.log("I got a request!");
     loginData = request.body;
     console.log(loginData);
     dataReceived = true;
     response.json({
-        status: "success",
-        received: request.body
+        "username": ""
     })
     loginToAPI();
-});
+}); */
 
 
 //3. SEND TO CVAT THE LOGIN DATA AND RECEIVE KEY
 async function loginToAPI() {
     const data = {
-        "username": loginData.username,
-        "email": loginData.email,
-        "password": loginData.password
+        "username": "julia-alfeo",
+        "email": "jalfeo94@live.de",
+        "password": "Q5zgxpGq"
     }
     const options = {
         method: "POST",
@@ -42,56 +60,97 @@ async function loginToAPI() {
         body: JSON.stringify(data)
     };
 
-    const api_url = "http://localhost:8080/api/v1/auth/login";
+    const api_url = annotation_url + "/api/v1/auth/login";
     const response = await fetch(api_url, options);
     const json = await response.json();
     dataReceived = false;
     keyToken = json;
     console.log("key received")
     console.log(keyToken.key);
-    createNewUser();
+    getLastUserID();
 }
 
 
-//4. GET JOB INFORMATION (TEST)
-async function createNewUser() {
+//4. GET THE ID OF LAST USER
+async function getLastUserID() {
+
     const options = {
         method: "GET",
         headers: {
             'Authorization': "token " + keyToken.key,
             "Content-Type": "application/json"
         },
-        //body: JSON.stringify(data)
     };
-    //fUWjX4blhjhsA2G72A9RVyu6e1sbPxxOjhJQVvXOt1VdkyprydzyF2wwkwx1QW1e
-    //bygoXYGi2BlXe0oHsjqJKwy9ztB6i2oPfV3VVpsLejZIYw71YWQqu0AzFYGWjrSf
-
-    const api_url = "http://localhost:8080/api/v1/jobs/5";
+    const api_url = annotation_url + "/api/v1/users?page_size=100";
     const response = await fetch(api_url, options);
     const json = await response.json();
-    console.log("received job information");
-    console.log(json);
+    const userCount = json.count; //amount of existing users
+    console.log("length of array with user");
+    console.log(json.results[userCount-1]);
+    lastUserID = json.results[userCount-1].id;
+    console.log("received last user ID : " + lastUserID);
+    createNewUser();
 }
 
+//5. CREATE NEW USER AND PASS IT TO CLIENT API FUNCTION
+async function createNewUser() {
+    var chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    var string_length = 8;
+    var randomstring = '';
+    for (var i = 0; i < string_length; i++) {
+        var rnum = Math.floor(Math.random() * chars.length);
+        randomstring += chars.substring(rnum, rnum + 1);
+    }
+    lastUserID += 1;
+    autoUsername = "autoUser-" + lastUserID;
+    pw = randomstring;
+    console.log("random password: " + pw);
 
-/**
-app.post("http://localhost:8080/api/v1/auth/login", async (request, response) => {
-    console.log("boom1")
-    //console.log(request);
-    const api_url = "http://localhost:8080/api/v1/auth/login";
-    const fetch_response = await fetch(api_url, {
+    const data = {
+        "username": autoUsername,
+        "password1": pw,
+        "password2": pw,
+        "confirmations": [
+            {
+                "name": "autoName" + lastUserID + 1
+            }
+        ]
+    }
+    const options = {
+        method: "POST",
+        headers: {
+            'Authorization': "token " + keyToken.key,
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    };
+    const api_url = annotation_url + "/api/v1/auth/register";
+    const response = await fetch(api_url, options);
+    const json = await response.json();
+    console.log("new user created");
+    console.log("username: " + autoUsername);
+    console.log("password: " + pw);
 
-    });
-    const json = await fetch_response.json();
-    response.json(json);
-    console.log(json)
-});  */
+    //sendUserLogin(autoUsername, pw);
+}
 
+/* //6. SEND LOGIN DATA TO CLIENT
+async function sendUserLogin(username, pw) {
+    const data = {
+        "username": username,
+        "password": pw
+    };
+    const options = {
+        method: "POST",
+        headers: {
+            //'Authorization': 'Token 97ea4b91c5c93d6e7ba72857ef5b70ff30831a30',
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify(data)
+    };
 
-/*
-app.post("/api", (request,response) => {
-    console.log(request);
+    fetch("/userLogin", options).then(response => {
+        console.log("success");
+    })
 
-});*/
-
-// "key": "387f97608a6d057a0046d0be21eaa17272fca823"
+} */

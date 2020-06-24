@@ -10,43 +10,22 @@
 <body>
     <h1>Annotation Tool: CVAT</h1>
     <p><a href="../index.html">go back</a></p>
-    <!--<iframe src="http://localhost:8080/tasks/5/jobs/5" title="CVAT" width="100%" height="800"></iframe>-->
+    <!-- <iframe src="http://localhost:8080/tasks/5/jobs/5" title="CVAT" width="100%" height="800"></iframe> -->
     
     
     
     <script>
-        const data = {
-            "username": "julia-alfeo",
-            "email": "jalfeo94@live.de",
-            "password": "Q5zgxpGq"
-        };
         const options = {
-            method: "POST",
+            method: "GET",
             headers: {
-                //'Authorization': 'Token 97ea4b91c5c93d6e7ba72857ef5b70ff30831a30',
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify(data)
         };
-        //console.log(options);
-        /* sendLoginData().catch(error => {
-            console.log("error!");
-            console.error(error);
-        }); */
 
-        /* async function sendLoginData() {
-            const response = await fetch("/myAPI", options).then (response => {
-                console.log("response: " + response);
-            });
-
-        } */
-
-        fetch("/myAPI", options).then(response => {
-            console.log("success");
+        fetch("/myAPI").then(response => {
+            const json = response.json();
+            console.log(json);
         })
-        /* window.onbeforeunload = function () {
-            return 'Are you sure you want to leave?';
-        }; */
     </script>
 </body>
 
