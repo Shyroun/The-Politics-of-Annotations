@@ -32,18 +32,6 @@ app.get("/myAPI", (request, response) => {
     
 });
 
-/* app.post("/userLogin", (request, response) => {
-    console.log("I got a request!");
-    loginData = request.body;
-    console.log(loginData);
-    dataReceived = true;
-    response.json({
-        "username": ""
-    })
-    loginToAPI();
-}); */
-
-
 //3. SEND TO CVAT THE LOGIN DATA AND RECEIVE KEY
 async function loginToAPI() {
     const data = {
@@ -104,7 +92,7 @@ async function createNewUser() {
     lastUserID += 1;
     autoUsername = "autoUser-" + lastUserID;
     pw = randomstring;
-    console.log("random password: " + pw);
+    //console.log("random password: " + pw);
 
     const data = {
         "username": autoUsername,
@@ -127,30 +115,7 @@ async function createNewUser() {
     const api_url = annotation_url + "/api/v1/auth/register";
     const response = await fetch(api_url, options);
     const json = await response.json();
-    console.log("new user created");
-    console.log("username: " + autoUsername);
-    console.log("password: " + pw);
-
-    //sendUserLogin(autoUsername, pw);
+    //console.log("new user created");
+    //console.log("username: " + autoUsername);
+    //console.log("password: " + pw);
 }
-
-/* //6. SEND LOGIN DATA TO CLIENT
-async function sendUserLogin(username, pw) {
-    const data = {
-        "username": username,
-        "password": pw
-    };
-    const options = {
-        method: "POST",
-        headers: {
-            //'Authorization': 'Token 97ea4b91c5c93d6e7ba72857ef5b70ff30831a30',
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify(data)
-    };
-
-    fetch("/userLogin", options).then(response => {
-        console.log("success");
-    })
-
-} */
