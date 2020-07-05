@@ -10,6 +10,7 @@
 <body>
     <h1>Annotation Tool: CVAT</h1>
     <p><a href="../index.html">go back</a></p>
+    <button onClick="logmeout()" id="logoutButton">log out</button>
     <div id="x">
         <p>Use following credentials to login at CVAT</p>
     </div>
@@ -22,6 +23,32 @@
         var username;
         var pw;
         getLogin();
+
+        const annotation_url = "http://localhost:8080";
+
+        async function logmeout() {
+            const data = {
+                "name": "CVAT for images 1.1",
+                "filename": "test",
+                "action": "download",
+                "id": "5"
+            }
+
+            /*{
+                "name": "CVAT for images 1.1",
+                "ext": "ZIP",
+                "version": "1.1"
+              }, */
+
+            const options = {
+                method: "GET",
+                body: JSON.stringify(data)
+            }
+            const api_url = annotation_url + "tasks/5/annotations";
+            const response = await fetch(api_url, options);
+            const json = await response.json();
+            console.log(json);
+        }
 
         async function getLogin() {
             const options = {
